@@ -29,8 +29,6 @@ namespace minimax.tictactoe
 
         public State GetInitialState()
         {
-
-
             int[,] field = new int[3, 3];
             State statoIniziale = new State();
             for (int i = 0; i < 3; i++)

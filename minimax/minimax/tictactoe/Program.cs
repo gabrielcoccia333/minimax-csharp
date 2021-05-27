@@ -36,7 +36,6 @@ namespace minimax.tictactoe
 
                     Action action = new Action(row, col);
                     actions = game.GetActions(state);
-
                     state = game.GetResult(state, action);
                     Partita(state);
 
@@ -53,11 +52,10 @@ namespace minimax.tictactoe
 
         public static void Partita(State state)
         {
-            char[] tris = new char[3] { ' ', 'X', 'O' };
+            char[] tris = new char[3] {' ', 'X', 'O'};
             string[,] pos = new string[3, 3];
             for (int i = 0; i < 3; i++)
             {
-
                 for (int j = 0; j < 3; j++)
                 {
                     if (state.field[i, j] == -1)
@@ -66,7 +64,6 @@ namespace minimax.tictactoe
                         pos[i, j] = "X";
                     else
                         pos[i, j] = "O";
-
                 }
             }
             Console.WriteLine("-------------");
